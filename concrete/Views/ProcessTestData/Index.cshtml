@@ -1,0 +1,71 @@
+﻿@model concrete.Models.concreatecardview
+
+@{
+    ViewBag.Title = "Process Test Data";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+        </div>
+    </section>
+}
+
+<div style="border:1px solid #f9fcf7; margin-top:15px; padding:15px;">
+   @using (Html.BeginForm("addcarddata", "ConcreteCards", FormMethod.Post))
+        {
+           <div class="content-datatable">
+            <table class="datatable" border="1" border>
+               <thead>
+                   <tr>
+                       <td>@Html.LabelFor(m => m.Carddata.labnumber)</td>
+                       <td>@Html.LabelFor(m => m.Carddata.setnumber)</td>
+                       <td>@Html.LabelFor(m => m.Cyl.cylnumber)</td>
+                       <td>@Html.LabelFor(m => m.Carddata.datecast) </td>
+                       <td>@Html.LabelFor(m => m.Cyl.datereclab)</td>
+                       <td>@Html.LabelFor(m => m.Cyl.datetested)</td>
+                       <td>@Html.LabelFor(m => m.Cyl.cylwt)</td>
+                       <td>@Html.LabelFor(m => m.Cyl.cyldensity)</td>
+                       <td>@Html.LabelFor(m => m.Carddata.spec28dayst)</td>
+                       <td>@Html.LabelFor(m => m.Cyl.remarks)</td>
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr>
+                       <td>@Html.TextBoxFor(model => model.Carddata.labnumber)</td>
+                       <td>@Html.TextBoxFor(model => model.Carddata.setnumber)</td>
+                       <td>@Html.TextBoxFor(model => model.Cyl.cylnumber)</td>
+                       <td>@Html.TextBoxFor(model => model.Carddata.datecast)</td>
+                       <td>@Html.TextBoxFor(model => model.Cyl.datetested)</td>
+                       <td>@Html.TextBoxFor(model => model.Cyl.cylwt)</td>
+                       <td>@Html.TextBoxFor(model => model.Cyl.cyldensity)</td>
+                       <td>@Html.TextBoxFor(model => model.Carddata.spec28dayst)</td>
+                       <td>@Html.TextBoxFor(model => model.Cyl.cylnumber)</td>
+                       <td>@Html.TextBoxFor(model => model.Cyl.remarks)</td>
+                   </tr>
+               </tbody>
+           </table>
+          </div>
+       
+         <div class="full-width-input">
+            @Html.LabelFor(m => m.Cyl.remarks)
+            @Html.TextBoxFor(model => model.Cyl.remarks)
+        </div>
+           <div class="clear"></div>
+            <table width="100%">
+        <tr>
+            <td align="right">
+                <input type="button" class="myButton" value="Download Data" />
+                <input type="button" class="myButton" value="Export Data" />
+                <input type="button" class="myButton" value="Delete Data" />
+                 <input type="button" class="myButton" value="View UnReported Data" />
+                 <input type="button" class="myButton" value="Main Menu" />
+            </td>
+        </tr>
+    </table>
+        }
+
+</div>

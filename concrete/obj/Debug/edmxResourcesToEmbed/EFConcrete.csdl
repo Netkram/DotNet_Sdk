@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CYLSModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="CYLSEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Asterisks" EntityType="CYLSModel.Asterisk" />
+    <EntitySet Name="carddatas" EntityType="CYLSModel.carddata" />
+    <EntitySet Name="CSAVs" EntityType="CYLSModel.CSAV" />
+    <EntitySet Name="CYL_LOAD_DIA" EntityType="CYLSModel.CYL_LOAD_DIA" />
+    <EntitySet Name="cyls" EntityType="CYLSModel.cyl" />
+    <EntitySet Name="DISTRIBUTIONS" EntityType="CYLSModel.DISTRIBUTION" />
+    <EntitySet Name="moulddatas" EntityType="CYLSModel.moulddata" />
+    <EntitySet Name="PasteErrors" EntityType="CYLSModel.PasteError" />
+    <EntitySet Name="rems" EntityType="CYLSModel.rem" />
+    <EntitySet Name="sysdiagrams" EntityType="CYLSModel.sysdiagram" />
+    <EntitySet Name="temps" EntityType="CYLSModel.temp" />
+    <EntitySet Name="TEMPTABLEs" EntityType="CYLSModel.TEMPTABLE" />
+    <EntitySet Name="TestSummaries" EntityType="CYLSModel.TestSummary" />
+    <EntitySet Name="UserProfiles" EntityType="CYLSModel.UserProfile" />
+    <EntitySet Name="webpages_Membership" EntityType="CYLSModel.webpages_Membership" />
+    <EntitySet Name="webpages_OAuthMembership" EntityType="CYLSModel.webpages_OAuthMembership" />
+    <EntitySet Name="webpages_Roles" EntityType="CYLSModel.webpages_Roles" />
+    <AssociationSet Name="webpages_UsersInRoles" Association="CYLSModel.webpages_UsersInRoles">
+      <End Role="webpages_Roles" EntitySet="webpages_Roles" />
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Asterisk">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="labnumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="C7Days" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="C28Days" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="Days" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="carddata">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="labnumber" Type="String" Nullable="false" MaxLength="8" Unicode="true" FixedLength="false" />
+    <Property Name="setnumber" Type="Int32" Nullable="false" />
+    <Property Name="datecast" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="spec28dayst" Type="Double" Nullable="false" />
+    <Property Name="contractor" Type="String" MaxLength="70" Unicode="true" FixedLength="false" />
+    <Property Name="projectnumber" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="locationonst" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="concsupplier" Type="String" MaxLength="70" Unicode="true" FixedLength="false" />
+    <Property Name="timemixercharged" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="typeofmould" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="tempofconc" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="specifiedair" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+    <Property Name="wateraoj" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+    <Property Name="trucknumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="nominalsizeofaggregate" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+    <Property Name="typeofadmixer" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="typeofcement" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="of" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="timecylscast" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="slump" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="airtemp" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="air" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="byauth" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="loadnumber" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+    <Property Name="drumctrevs" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="airentagent" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="inicurtempmax" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="inicurtempmin" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="productcode" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="labremarks" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="cylscastby" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="costsheet" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="project" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="sizeofmould" Type="Double" />
+    <Property Name="specifiedslump" Type="String" MaxLength="53" Unicode="true" FixedLength="false" />
+    <Property Name="prjlocation" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="CSAV">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="WKENDING" Type="DateTime" Precision="3" />
+    <Property Name="LAST4V" Type="Double" />
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="CYL_LOAD_DIA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="LABNUMBER" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TESTDATE" Type="DateTime" Precision="3" />
+    <Property Name="LOAD_KN" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="LOAD_P" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DIAMETER" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="STRENGTH" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="cyl">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="labnumber" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="setnumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="cylnumber" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+    <Property Name="datereclab" Type="DateTime" Precision="3" />
+    <Property Name="datetested" Type="DateTime" Precision="3" />
+    <Property Name="cylwt" Type="Double" />
+    <Property Name="cyldensity" Type="Int32" />
+    <Property Name="strength" Type="Double" />
+    <Property Name="remarks" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="number" Type="Int32" />
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="DISTRIBUTION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="LABNO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DISTRIBUTIONS" Type="String" MaxLength="2500" Unicode="true" FixedLength="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="moulddata">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="moulddia" Type="Double" />
+    <Property Name="mouldht" Type="Double" />
+    <Property Name="mouldsize" Type="Int16" />
+    <Property Name="mouldtype" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="PasteError">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Field0" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="rem">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="remark" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="temp">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="labnum" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="testdes" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="TEMPTABLE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="LABNUMBER" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="STRENGTH" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+    <Property Name="TESTDATE" Type="DateTime" Precision="0" />
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="TestSummary">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="projectnumber" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="labnumber" Type="String" MaxLength="8" Unicode="true" FixedLength="false" />
+    <Property Name="setnumber" Type="Int32" />
+    <Property Name="datecast" Type="DateTime" Precision="0" />
+    <Property Name="strength" Type="Double" />
+    <Property Name="datetested" Type="DateTime" Precision="0" />
+    <Property Name="spec28dayst" Type="Double" />
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="UserProfile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="56" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="webpages_Roles" Relationship="CYLSModel.webpages_UsersInRoles" FromRole="UserProfile" ToRole="webpages_Roles" />
+  </EntityType>
+  <EntityType Name="webpages_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="ConfirmationToken" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="IsConfirmed" Type="Boolean" />
+    <Property Name="LastPasswordFailureDate" Type="DateTime" Precision="3" />
+    <Property Name="PasswordFailuresSinceLastSuccess" Type="Int32" Nullable="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordChangedDate" Type="DateTime" Precision="3" />
+    <Property Name="PasswordSalt" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordVerificationToken" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordVerificationTokenExpirationDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="webpages_OAuthMembership">
+    <Key>
+      <PropertyRef Name="Provider" />
+      <PropertyRef Name="ProviderUserId" />
+    </Key>
+    <Property Name="Provider" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="ProviderUserId" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="UserProfiles" Relationship="CYLSModel.webpages_UsersInRoles" FromRole="webpages_Roles" ToRole="UserProfile" />
+  </EntityType>
+  <Association Name="webpages_UsersInRoles">
+    <End Role="webpages_Roles" Type="CYLSModel.webpages_Roles" Multiplicity="*" />
+    <End Role="UserProfile" Type="CYLSModel.UserProfile" Multiplicity="*" />
+  </Association>
+</Schema>

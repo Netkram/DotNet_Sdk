@@ -1,0 +1,303 @@
+﻿@using concrete.Models;
+@model concreatecardview
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>Compressive Strength Cylinder Test Data</h1>
+            </hgroup>
+        </div>
+    </section>
+}
+
+<div style="border:1px solid #f9fcf7; margin-top:15px; padding:15px;">
+@using (Html.BeginForm("addcylinderdata", "ConcreteCards", FormMethod.Post))
+{
+    <div class="medium-input">
+        @Html.LabelFor(m => m.Cyl.labnumber)    
+        @Html.TextBoxFor(model => model.Cyl.labnumber)
+    </div>
+    <div class="medium-input">
+        @Html.LabelFor(m => m.Cyl.setnumber)
+        @Html.TextBoxFor(model => model.Cyl.setnumber)
+    </div>
+    <div class="medium-input">
+        @Html.LabelFor(m => m.Cyl.cylnumber)
+        @Html.TextBoxFor(model => model.Cyl.cylnumber)
+    </div>
+    <div class="medium-input">
+        @Html.LabelFor(m => m.Carddata.datecast)
+        @Html.TextBoxFor(model => model.Carddata.datecast)
+    </div>
+    <div class="medium-input">
+        @Html.LabelFor(m => m.Cyl.datereclab)
+        @Html.TextBoxFor(model => model.Cyl.datereclab)
+    </div>
+    <div class="medium-input">
+        @Html.LabelFor(m => m.Cyl.datetested)
+        @Html.TextBoxFor(model => model.Cyl.datetested)
+    </div>
+    <div class="small-input">
+        @Html.LabelFor(m => m.Cyl.cylwt)
+        @Html.TextBoxFor(model => model.Cyl.cylwt)
+    </div>
+    <div class="medium-input">
+        @Html.LabelFor(m => m.Cyl.cyldensity)
+        @Html.TextBoxFor(model => model.Cyl.cyldensity)
+    </div>
+    <div class="medium-input">
+        @Html.LabelFor(m => m.Carddata.spec28dayst)
+        @Html.TextBoxFor(model => model.Carddata.spec28dayst)
+    </div>
+    <div class="small-input">
+        @Html.LabelFor(m => m.Cyl.cylnumber)
+        @Html.TextBoxFor(model => model.Cyl.cylnumber)
+    </div>
+    <div class="small-input">
+        @Html.LabelFor(m => m.Cyl.remarks)
+        @Html.TextBoxFor(model => model.Cyl.remarks)
+    </div>
+    <div class="clear"></div>
+    <table width="100%">
+        <tr>
+            <td></td>
+            <td align="center">
+                <input type="submit" class="myButton" value="ADD" />
+                <input type="button" class="myButton" value="Update" />
+                <input type="button" class="myButton" value="Remove" />
+            </td>
+        </tr>
+    </table>  
+    
+}
+    
+        @using (Html.BeginForm("addcarddata", "ConcreteCards", FormMethod.Post))
+        {
+           <div class="content-datatable">
+            <table class="datatable" border="1" border>
+               <thead>
+                   <tr>
+                       <td>@Html.LabelFor(m => m.Carddata.labnumber)</td>
+                       <td>@Html.LabelFor(m => m.Carddata.setnumber)</td>
+                       <td>@Html.LabelFor(m => m.Cyl.cylnumber)</td>
+                       <td>@Html.LabelFor(m => m.Carddata.datecast) </td>
+                       <td>@Html.LabelFor(m => m.Cyl.datereclab)</td>
+                       <td>@Html.LabelFor(m => m.Cyl.datetested)</td>
+                       <td>@Html.LabelFor(m => m.Cyl.cylwt)</td>
+                       <td>@Html.LabelFor(m => m.Cyl.cyldensity)</td>
+                       <td>@Html.LabelFor(m => m.Carddata.spec28dayst)</td>
+                       <td>@Html.LabelFor(m => m.Cyl.remarks)</td>
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr>
+                       <td>@Html.TextBoxFor(model => model.Carddata.labnumber)</td>
+                       <td>@Html.TextBoxFor(model => model.Carddata.setnumber)</td>
+                       <td>@Html.TextBoxFor(model => model.Cyl.cylnumber)</td>
+                       <td>@Html.TextBoxFor(model => model.Carddata.datecast)</td>
+                       <td>@Html.TextBoxFor(model => model.Cyl.datetested)</td>
+                       <td>@Html.TextBoxFor(model => model.Cyl.cylwt)</td>
+                       <td>@Html.TextBoxFor(model => model.Cyl.cyldensity)</td>
+                       <td>@Html.TextBoxFor(model => model.Carddata.spec28dayst)</td>
+                       <td>@Html.TextBoxFor(model => model.Cyl.cylnumber)</td>
+                       <td>@Html.TextBoxFor(model => model.Cyl.remarks)</td>
+                   </tr>
+               </tbody>
+           </table>
+          </div>
+           <div class="clear"></div>
+            <table width="100%">
+        <tr>
+            <td>
+                <input type="button" class="myButton" value="Plastic" />
+                <input type="button" class="myButton" value="Metal" />                                
+            </td>
+            <td align="right">
+                <input type="button" class="myButton" value="REMARK" />
+                <input type="button" class="myButton" value="CHECK" />
+                <input type="button" class="myButton" value="REPORT" />
+                 <input type="button" class="myButton" value="GET STRE" />
+                 <input type="button" class="myButton" value="PUT*" />
+                 <input type="button" class="myButton" value="PUT+-" />
+            </td>
+        </tr>
+    </table>
+        }
+
+</div>
+
+<br />
+
+<div style="border:1px solid #f9fcf7; padding:15px;">
+    @using (Html.BeginForm("addcarddata", "ConcreteCards", FormMethod.Post))
+    {
+        <div class="first-input-small">
+            @Html.LabelFor(m => m.Carddata.projectnumber)    
+            @Html.TextBoxFor(model => model.Carddata.projectnumber)
+        </div>
+        
+        <div class="second-input-large">
+            @Html.LabelFor(m => m.Carddata.project)
+            @Html.TextBoxFor(model => model.Carddata.project)
+        </div>
+        
+        <div class="full-width-input">
+            @Html.LabelFor(m => m.Carddata.prjlocation)
+            @Html.TextBoxFor(model => model.Carddata.prjlocation)
+        </div>
+        
+        <div class="third-input-small">
+            @Html.LabelFor(m => m.Carddata.contractor)    
+            @Html.TextBoxFor(model => model.Carddata.contractor)
+        </div>
+        
+        <div class="third-input-small">
+            @Html.LabelFor(m => m.Carddata.productcode)
+            @Html.TextBoxFor(model => model.Carddata.productcode)
+        </div>
+        
+         <div class="full-width-input">
+            @Html.LabelFor(m => m.Carddata.locationonst)
+            @Html.TextBoxFor(model => model.Carddata.locationonst)
+        </div>
+        
+         <div class="full-width-input">
+            @Html.LabelFor(m => m.Carddata.concsupplier)
+            @Html.TextBoxFor(model => model.Carddata.concsupplier)
+        </div>
+        
+        <div class="third-input-small">
+            @Html.LabelFor(m => m.Carddata.cylscastby)
+            @Html.TextBoxFor(model => model.Carddata.cylscastby)
+        </div>
+        
+        <div class="third-input-small">
+            @Html.LabelFor(m => m.Carddata.of)
+            @Html.TextBoxFor(model => model.Carddata.of)
+        </div>
+        
+        <div class="third-input-small">
+            @Html.LabelFor(m => m.Carddata.timemixercharged)
+            @Html.TextBoxFor(model => model.Carddata.timemixercharged)
+        </div>
+        
+        <div class="third-input-small">
+            @Html.LabelFor(m => m.Carddata.timecylscast)
+            @Html.TextBoxFor(model => model.Carddata.timecylscast)
+        </div>
+        
+        <div class="third-input-small">
+            @Html.LabelFor(m => m.Carddata.specifiedslump)
+            @Html.TextBoxFor(model => model.Carddata.specifiedslump)
+        </div>
+        
+        <div class="third-input-small">
+            @Html.LabelFor(m => m.Carddata.tempofconc)
+            @Html.TextBoxFor(model => model.Carddata.tempofconc)
+        </div>
+        
+        <div class="third-input-small">
+            @Html.LabelFor(m => m.Carddata.tempofconc)
+            @Html.TextBoxFor(model => model.Carddata.tempofconc)
+        </div>
+        
+        <div class="third-input-small">
+            @Html.LabelFor(m => m.Carddata.airtemp)
+            @Html.TextBoxFor(model => model.Carddata.airtemp)
+        </div>
+        
+        <div class="third-input-small">
+            @Html.LabelFor(m => m.Carddata.specifiedair)
+            @Html.TextBoxFor(model => model.Carddata.specifiedair)
+        </div>
+        
+        <div class="third-input-small">
+            @Html.LabelFor(m => m.Carddata.specifiedair)
+            @Html.TextBoxFor(model => model.Carddata.specifiedair)
+        </div>
+        
+        <div class="third-input-small">
+            @Html.LabelFor(m => m.Carddata.wateraoj)
+            @Html.TextBoxFor(model => model.Carddata.wateraoj)
+        </div>
+        
+        <div class="third-input-small">
+            @Html.LabelFor(m => m.Carddata.byauth)
+            @Html.TextBoxFor(model => model.Carddata.byauth)
+        </div>
+        
+        <div class="third-input-small">
+            @Html.LabelFor(m => m.Carddata.trucknumber)
+            @Html.TextBoxFor(model => model.Carddata.trucknumber)
+        </div>
+        
+        <div class="third-input-small">
+            @Html.LabelFor(m => m.Carddata.loadnumber)
+            @Html.TextBoxFor(model => model.Carddata.loadnumber)
+        </div>
+        
+        <div class="third-input-small">
+            @Html.LabelFor(m => m.Carddata.productcode)
+            @Html.TextBoxFor(model => model.Carddata.productcode)
+        </div>
+        
+        <div class="four-input-small">
+            @Html.LabelFor(m => m.Carddata.typeofmould)
+            @Html.TextBoxFor(model => model.Carddata.typeofmould)
+        </div>
+        
+        <div class="four-input-small">
+            @Html.LabelFor(m => m.Carddata.sizeofmould)
+            @Html.TextBoxFor(model => model.Carddata.sizeofmould)
+        </div>
+        
+        <div class="third-input-small">
+            @Html.LabelFor(m => m.Carddata.typeofadmixer)
+            @Html.TextBoxFor(model => model.Carddata.typeofadmixer)
+        </div>
+        
+        <div class="third-input-small">
+            @Html.LabelFor(m => m.Carddata.productcode)
+            @Html.TextBoxFor(model => model.Carddata.productcode)
+        </div>
+        
+        <div class="third-input-small">
+            @Html.LabelFor(m => m.Carddata.typeofcement)
+            @Html.TextBoxFor(model => model.Carddata.typeofcement)
+        </div>
+        
+        <div class="four-input-small">
+            @Html.LabelFor(m => m.Carddata.inicurtempmax)
+            @Html.TextBoxFor(model => model.Carddata.inicurtempmax)
+        </div>
+        
+         <div class="four-input-small">
+            @Html.LabelFor(m => m.Carddata.inicurtempmin)
+            @Html.TextBoxFor(model => model.Carddata.inicurtempmin)
+        </div>
+        
+        <div class="full-width-input">
+            @Html.LabelFor(m => m.Cyl.remarks)
+            @Html.TextBoxFor(model => model.Cyl.remarks)
+        </div>
+        
+        <div class="clear"></div>
+        <table width="100%">
+        <tr>
+            <td></td>
+            <td align="center">
+                <input type="button" class="myButton" value="EDIT" />
+                <input type="submit" class="myButton" value="ADD" />
+                <input type="button" class="myButton" value="MAIN MENU" />
+            </td>
+        </tr>
+    </table>
+    }
+
+</div>
+

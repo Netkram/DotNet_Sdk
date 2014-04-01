@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CYLSModelStoreContainer" CdmEntityContainer="CYLSEntities">
+    <EntitySetMapping Name="Asterisks">
+      <EntityTypeMapping TypeName="CYLSModel.Asterisk">
+        <MappingFragment StoreEntitySet="Asterisk">
+          <ScalarProperty Name="labnumber" ColumnName="labnumber" />
+          <ScalarProperty Name="C7Days" ColumnName="7Days" />
+          <ScalarProperty Name="C28Days" ColumnName="28Days" />
+          <ScalarProperty Name="Days" ColumnName="Days" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="carddatas">
+      <EntityTypeMapping TypeName="CYLSModel.carddata">
+        <MappingFragment StoreEntitySet="carddata">
+          <ScalarProperty Name="labnumber" ColumnName="labnumber" />
+          <ScalarProperty Name="setnumber" ColumnName="setnumber" />
+          <ScalarProperty Name="datecast" ColumnName="datecast" />
+          <ScalarProperty Name="spec28dayst" ColumnName="spec28dayst" />
+          <ScalarProperty Name="contractor" ColumnName="contractor" />
+          <ScalarProperty Name="projectnumber" ColumnName="projectnumber" />
+          <ScalarProperty Name="locationonst" ColumnName="locationonst" />
+          <ScalarProperty Name="concsupplier" ColumnName="concsupplier" />
+          <ScalarProperty Name="timemixercharged" ColumnName="timemixercharged" />
+          <ScalarProperty Name="typeofmould" ColumnName="typeofmould" />
+          <ScalarProperty Name="tempofconc" ColumnName="tempofconc" />
+          <ScalarProperty Name="specifiedair" ColumnName="specifiedair" />
+          <ScalarProperty Name="wateraoj" ColumnName="wateraoj" />
+          <ScalarProperty Name="trucknumber" ColumnName="trucknumber" />
+          <ScalarProperty Name="nominalsizeofaggregate" ColumnName="nominalsizeofaggregate" />
+          <ScalarProperty Name="typeofadmixer" ColumnName="typeofadmixer" />
+          <ScalarProperty Name="typeofcement" ColumnName="typeofcement" />
+          <ScalarProperty Name="of" ColumnName="of" />
+          <ScalarProperty Name="timecylscast" ColumnName="timecylscast" />
+          <ScalarProperty Name="slump" ColumnName="slump" />
+          <ScalarProperty Name="airtemp" ColumnName="airtemp" />
+          <ScalarProperty Name="air" ColumnName="air" />
+          <ScalarProperty Name="byauth" ColumnName="byauth" />
+          <ScalarProperty Name="loadnumber" ColumnName="loadnumber" />
+          <ScalarProperty Name="drumctrevs" ColumnName="drumctrevs" />
+          <ScalarProperty Name="airentagent" ColumnName="airentagent" />
+          <ScalarProperty Name="inicurtempmax" ColumnName="inicurtempmax" />
+          <ScalarProperty Name="inicurtempmin" ColumnName="inicurtempmin" />
+          <ScalarProperty Name="productcode" ColumnName="productcode" />
+          <ScalarProperty Name="labremarks" ColumnName="labremarks" />
+          <ScalarProperty Name="cylscastby" ColumnName="cylscastby" />
+          <ScalarProperty Name="costsheet" ColumnName="costsheet" />
+          <ScalarProperty Name="project" ColumnName="project" />
+          <ScalarProperty Name="sizeofmould" ColumnName="sizeofmould" />
+          <ScalarProperty Name="specifiedslump" ColumnName="specifiedslump" />
+          <ScalarProperty Name="prjlocation" ColumnName="prjlocation" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CSAVs">
+      <EntityTypeMapping TypeName="CYLSModel.CSAV">
+        <MappingFragment StoreEntitySet="CSAV">
+          <ScalarProperty Name="WKENDING" ColumnName="WKENDING" />
+          <ScalarProperty Name="LAST4V" ColumnName="LAST4V" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CYL_LOAD_DIA">
+      <EntityTypeMapping TypeName="CYLSModel.CYL_LOAD_DIA">
+        <MappingFragment StoreEntitySet="CYL_LOAD_DIA">
+          <ScalarProperty Name="LABNUMBER" ColumnName="LABNUMBER" />
+          <ScalarProperty Name="TESTDATE" ColumnName="TESTDATE" />
+          <ScalarProperty Name="LOAD_KN" ColumnName="LOAD_KN" />
+          <ScalarProperty Name="LOAD_P" ColumnName="LOAD_P" />
+          <ScalarProperty Name="DIAMETER" ColumnName="DIAMETER" />
+          <ScalarProperty Name="STRENGTH" ColumnName="STRENGTH" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cyls">
+      <EntityTypeMapping TypeName="CYLSModel.cyl">
+        <MappingFragment StoreEntitySet="cyls">
+          <ScalarProperty Name="labnumber" ColumnName="labnumber" />
+          <ScalarProperty Name="setnumber" ColumnName="setnumber" />
+          <ScalarProperty Name="cylnumber" ColumnName="cylnumber" />
+          <ScalarProperty Name="datereclab" ColumnName="datereclab" />
+          <ScalarProperty Name="datetested" ColumnName="datetested" />
+          <ScalarProperty Name="cylwt" ColumnName="cylwt" />
+          <ScalarProperty Name="cyldensity" ColumnName="cyldensity" />
+          <ScalarProperty Name="strength" ColumnName="strength" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DISTRIBUTIONS">
+      <EntityTypeMapping TypeName="CYLSModel.DISTRIBUTION">
+        <MappingFragment StoreEntitySet="DISTRIBUTIONS">
+          <ScalarProperty Name="LABNO" ColumnName="LABNO" />
+          <ScalarProperty Name="DISTRIBUTIONS" ColumnName="DISTRIBUTIONS" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="moulddatas">
+      <EntityTypeMapping TypeName="CYLSModel.moulddata">
+        <MappingFragment StoreEntitySet="moulddata">
+          <ScalarProperty Name="moulddia" ColumnName="moulddia" />
+          <ScalarProperty Name="mouldht" ColumnName="mouldht" />
+          <ScalarProperty Name="mouldsize" ColumnName="mouldsize" />
+          <ScalarProperty Name="mouldtype" ColumnName="mouldtype" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PasteErrors">
+      <EntityTypeMapping TypeName="CYLSModel.PasteError">
+        <MappingFragment StoreEntitySet="PasteErrors">
+          <ScalarProperty Name="Field0" ColumnName="Field0" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rems">
+      <EntityTypeMapping TypeName="CYLSModel.rem">
+        <MappingFragment StoreEntitySet="rems">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="CYLSModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="temps">
+      <EntityTypeMapping TypeName="CYLSModel.temp">
+        <MappingFragment StoreEntitySet="temp">
+          <ScalarProperty Name="labnum" ColumnName="labnum" />
+          <ScalarProperty Name="testdes" ColumnName="testdes" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TEMPTABLEs">
+      <EntityTypeMapping TypeName="CYLSModel.TEMPTABLE">
+        <MappingFragment StoreEntitySet="TEMPTABLE">
+          <ScalarProperty Name="LABNUMBER" ColumnName="LABNUMBER" />
+          <ScalarProperty Name="STRENGTH" ColumnName="STRENGTH" />
+          <ScalarProperty Name="TESTDATE" ColumnName="TESTDATE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TestSummaries">
+      <EntityTypeMapping TypeName="CYLSModel.TestSummary">
+        <MappingFragment StoreEntitySet="TestSummary">
+          <ScalarProperty Name="projectnumber" ColumnName="projectnumber" />
+          <ScalarProperty Name="labnumber" ColumnName="labnumber" />
+          <ScalarProperty Name="setnumber" ColumnName="setnumber" />
+          <ScalarProperty Name="datecast" ColumnName="datecast" />
+          <ScalarProperty Name="strength" ColumnName="strength" />
+          <ScalarProperty Name="datetested" ColumnName="datetested" />
+          <ScalarProperty Name="spec28dayst" ColumnName="spec28dayst" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserProfiles">
+      <EntityTypeMapping TypeName="CYLSModel.UserProfile">
+        <MappingFragment StoreEntitySet="UserProfile">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="webpages_Membership">
+      <EntityTypeMapping TypeName="CYLSModel.webpages_Membership">
+        <MappingFragment StoreEntitySet="webpages_Membership">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ConfirmationToken" ColumnName="ConfirmationToken" />
+          <ScalarProperty Name="IsConfirmed" ColumnName="IsConfirmed" />
+          <ScalarProperty Name="LastPasswordFailureDate" ColumnName="LastPasswordFailureDate" />
+          <ScalarProperty Name="PasswordFailuresSinceLastSuccess" ColumnName="PasswordFailuresSinceLastSuccess" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PasswordChangedDate" ColumnName="PasswordChangedDate" />
+          <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+          <ScalarProperty Name="PasswordVerificationToken" ColumnName="PasswordVerificationToken" />
+          <ScalarProperty Name="PasswordVerificationTokenExpirationDate" ColumnName="PasswordVerificationTokenExpirationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="webpages_OAuthMembership">
+      <EntityTypeMapping TypeName="CYLSModel.webpages_OAuthMembership">
+        <MappingFragment StoreEntitySet="webpages_OAuthMembership">
+          <ScalarProperty Name="Provider" ColumnName="Provider" />
+          <ScalarProperty Name="ProviderUserId" ColumnName="ProviderUserId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="webpages_Roles">
+      <EntityTypeMapping TypeName="CYLSModel.webpages_Roles">
+        <MappingFragment StoreEntitySet="webpages_Roles">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="webpages_UsersInRoles" TypeName="CYLSModel.webpages_UsersInRoles" StoreEntitySet="webpages_UsersInRoles">
+      <EndProperty Name="webpages_Roles">
+        <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="UserProfile">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

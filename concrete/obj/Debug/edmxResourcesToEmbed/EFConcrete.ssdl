@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CYLSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="CYLSModelStoreContainer">
+    <EntitySet Name="Asterisk" EntityType="CYLSModel.Store.Asterisk" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="carddata" EntityType="CYLSModel.Store.carddata" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CSAV" EntityType="CYLSModel.Store.CSAV" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CYL_LOAD_DIA" EntityType="CYLSModel.Store.CYL_LOAD_DIA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="cyls" EntityType="CYLSModel.Store.cyls" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DISTRIBUTIONS" EntityType="CYLSModel.Store.DISTRIBUTIONS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="moulddata" EntityType="CYLSModel.Store.moulddata" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PasteErrors" EntityType="CYLSModel.Store.PasteErrors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="rems" EntityType="CYLSModel.Store.rems" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="CYLSModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="temp" EntityType="CYLSModel.Store.temp" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TEMPTABLE" EntityType="CYLSModel.Store.TEMPTABLE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TestSummary" EntityType="CYLSModel.Store.TestSummary" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserProfile" EntityType="CYLSModel.Store.UserProfile" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_Membership" EntityType="CYLSModel.Store.webpages_Membership" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_OAuthMembership" EntityType="CYLSModel.Store.webpages_OAuthMembership" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_Roles" EntityType="CYLSModel.Store.webpages_Roles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_UsersInRoles" EntityType="CYLSModel.Store.webpages_UsersInRoles" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="fk_RoleId" Association="CYLSModel.Store.fk_RoleId">
+      <End Role="webpages_Roles" EntitySet="webpages_Roles" />
+      <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserId" Association="CYLSModel.Store.fk_UserId">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Asterisk">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="labnumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="7Days" Type="nchar" MaxLength="10" />
+    <Property Name="28Days" Type="nchar" MaxLength="10" />
+    <Property Name="Days" Type="nchar" MaxLength="10" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="carddata">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="labnumber" Type="nvarchar" Nullable="false" MaxLength="8" />
+    <Property Name="setnumber" Type="int" Nullable="false" />
+    <Property Name="datecast" Type="datetime" Nullable="false" />
+    <Property Name="spec28dayst" Type="float" Nullable="false" />
+    <Property Name="contractor" Type="nvarchar" MaxLength="70" />
+    <Property Name="projectnumber" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="locationonst" Type="nvarchar(max)" />
+    <Property Name="concsupplier" Type="nvarchar" MaxLength="70" />
+    <Property Name="timemixercharged" Type="nvarchar" MaxLength="10" />
+    <Property Name="typeofmould" Type="nvarchar" MaxLength="50" />
+    <Property Name="tempofconc" Type="nvarchar" MaxLength="50" />
+    <Property Name="specifiedair" Type="nvarchar" MaxLength="25" />
+    <Property Name="wateraoj" Type="nvarchar" MaxLength="25" />
+    <Property Name="trucknumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="nominalsizeofaggregate" Type="nvarchar" MaxLength="25" />
+    <Property Name="typeofadmixer" Type="nvarchar(max)" />
+    <Property Name="typeofcement" Type="nvarchar" MaxLength="30" />
+    <Property Name="of" Type="nvarchar" MaxLength="50" />
+    <Property Name="timecylscast" Type="nvarchar" MaxLength="10" />
+    <Property Name="slump" Type="nvarchar" MaxLength="50" />
+    <Property Name="airtemp" Type="nvarchar" MaxLength="50" />
+    <Property Name="air" Type="nvarchar" MaxLength="10" />
+    <Property Name="byauth" Type="nvarchar" MaxLength="50" />
+    <Property Name="loadnumber" Type="nvarchar" MaxLength="5" />
+    <Property Name="drumctrevs" Type="nvarchar" MaxLength="20" />
+    <Property Name="airentagent" Type="nvarchar" MaxLength="50" />
+    <Property Name="inicurtempmax" Type="nvarchar" MaxLength="50" />
+    <Property Name="inicurtempmin" Type="nvarchar" MaxLength="50" />
+    <Property Name="productcode" Type="nvarchar" MaxLength="30" />
+    <Property Name="labremarks" Type="ntext" />
+    <Property Name="cylscastby" Type="nvarchar" MaxLength="50" />
+    <Property Name="costsheet" Type="nvarchar" MaxLength="15" />
+    <Property Name="project" Type="nvarchar" MaxLength="100" />
+    <Property Name="sizeofmould" Type="float" />
+    <Property Name="specifiedslump" Type="nvarchar" MaxLength="53" />
+    <Property Name="prjlocation" Type="nvarchar" MaxLength="100" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="CSAV">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="WKENDING" Type="datetime" />
+    <Property Name="LAST4V" Type="float" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="CYL_LOAD_DIA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="LABNUMBER" Type="nvarchar" MaxLength="50" />
+    <Property Name="TESTDATE" Type="datetime" />
+    <Property Name="LOAD_KN" Type="nvarchar" MaxLength="50" />
+    <Property Name="LOAD_P" Type="nvarchar" MaxLength="50" />
+    <Property Name="DIAMETER" Type="nvarchar" MaxLength="50" />
+    <Property Name="STRENGTH" Type="decimal" Scale="2" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="cyls">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="labnumber" Type="nvarchar" MaxLength="10" />
+    <Property Name="setnumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="cylnumber" Type="nvarchar" MaxLength="5" />
+    <Property Name="datereclab" Type="datetime" />
+    <Property Name="datetested" Type="datetime" />
+    <Property Name="cylwt" Type="float" />
+    <Property Name="cyldensity" Type="int" />
+    <Property Name="strength" Type="float" />
+    <Property Name="remarks" Type="nvarchar" MaxLength="50" />
+    <Property Name="number" Type="int" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="DISTRIBUTIONS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="LABNO" Type="nvarchar" MaxLength="50" />
+    <Property Name="DISTRIBUTIONS" Type="nvarchar" MaxLength="2500" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="moulddata">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="moulddia" Type="float" />
+    <Property Name="mouldht" Type="float" />
+    <Property Name="mouldsize" Type="smallint" />
+    <Property Name="mouldtype" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="PasteErrors">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Field0" Type="ntext" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="rems">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="remark" Type="nvarchar" MaxLength="100" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="temp">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="labnum" Type="nvarchar" MaxLength="10" />
+    <Property Name="testdes" Type="nvarchar" MaxLength="20" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="TEMPTABLE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="LABNUMBER" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="STRENGTH" Type="nvarchar" MaxLength="5" />
+    <Property Name="TESTDATE" Type="smalldatetime" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="TestSummary">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="projectnumber" Type="nvarchar" MaxLength="10" />
+    <Property Name="labnumber" Type="nvarchar" MaxLength="8" />
+    <Property Name="setnumber" Type="int" />
+    <Property Name="datecast" Type="smalldatetime" />
+    <Property Name="strength" Type="float" />
+    <Property Name="datetested" Type="smalldatetime" />
+    <Property Name="spec28dayst" Type="float" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="UserProfile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="56" />
+  </EntityType>
+  <EntityType Name="webpages_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ConfirmationToken" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsConfirmed" Type="bit" />
+    <Property Name="LastPasswordFailureDate" Type="datetime" />
+    <Property Name="PasswordFailuresSinceLastSuccess" Type="int" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordChangedDate" Type="datetime" />
+    <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordVerificationToken" Type="nvarchar" MaxLength="128" />
+    <Property Name="PasswordVerificationTokenExpirationDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="webpages_OAuthMembership">
+    <Key>
+      <PropertyRef Name="Provider" />
+      <PropertyRef Name="ProviderUserId" />
+    </Key>
+    <Property Name="Provider" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="ProviderUserId" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="webpages_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="fk_RoleId">
+    <End Role="webpages_Roles" Type="CYLSModel.Store.webpages_Roles" Multiplicity="1" />
+    <End Role="webpages_UsersInRoles" Type="CYLSModel.Store.webpages_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="webpages_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="webpages_UsersInRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserId">
+    <End Role="UserProfile" Type="CYLSModel.Store.UserProfile" Multiplicity="1" />
+    <End Role="webpages_UsersInRoles" Type="CYLSModel.Store.webpages_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="webpages_UsersInRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
