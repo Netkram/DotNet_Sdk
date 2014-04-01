@@ -26,7 +26,7 @@ namespace concrete.Controllers
         {
 
             ConcreateCard.addcylinder(model.Cyl);
-            
+            //this is pillayer
             return View("index", model); 
         }
 
