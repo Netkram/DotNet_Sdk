@@ -2,6 +2,7 @@
     ViewBag.Title = "Cost Sheet";
 }
 @section featured {
+   
     <section class="featured">
         <div class="content-wrapper">
             <hgroup class="title">
@@ -9,6 +10,9 @@
                 <h2>@ViewBag.Message</h2>
             </hgroup>
         </div>
-    </section>
+    </section>  
 }
-<h2>costsheet</h2>
+@using (Html.BeginForm())
+{ 
+<input type="submit" value="submit" />
+}
