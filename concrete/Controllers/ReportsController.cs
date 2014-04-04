@@ -18,21 +18,34 @@ namespace concrete.Controllers
 
         public ActionResult costsheet()
         {
+
+            return  View();
+        }
+
+        [HttpPost]
+        public ActionResult costsheet(FormCollection test)
+        {
+
+            Response.Redirect("~/CrystalReports/CostSheetView.aspx");
             return View();
         }
 
-        public ActionResult csa()
+        public  ActionResult csa()
         {
+            Response.Redirect("~/CrystalReports/CostSheetView.aspx");
             return View();
         }
 
         public ActionResult analysis()
         {
+            Response.Redirect("~/Reports/CostSheetView.aspx");
             return View();
+
         }
 
         public ActionResult summary()
         {
+            Response.Redirect("~/Reports/CostSheetView.aspx");
             return View();
         }
 
@@ -49,6 +62,7 @@ namespace concrete.Controllers
 
         public ActionResult Create()
         {
+
             return View();
         }
 
